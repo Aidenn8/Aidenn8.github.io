@@ -14,15 +14,14 @@ body {
     overflow-x: hidden;
 }
 
-/* Links */
 a {
     text-decoration: none;
-    color: inherit;  /* Use the inherited color */
+    color: inherit;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ff6b6b;  /* Soft pink color on hover */
+    color: #ff6b6b;  /* Pink hover color */
 }
 
 /* Header & Navigation */
@@ -35,19 +34,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .nav .logo {
     font-size: 30px;
     font-weight: bold;
-    letter-spacing: 1px;
     color: #fff;
     text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.nav .logo:hover {
-    color: #ff6b6b;  /* Soft pink hover effect */
+    letter-spacing: 1px;
 }
 
 nav ul {
@@ -62,29 +57,26 @@ nav ul li {
 nav ul li a {
     font-size: 18px;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* Hero Section */
 .hero {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
     text-align: center;
     background-color: #000;
-    color: white;
-    animation: fadeIn 1.5s ease-out;
 }
 
 .hero h1 {
     font-size: 60px;
-    margin-bottom: 20px;
-    background: linear-gradient(90deg, #ffffff, #ff6b6b); /* White to Pink gradient */
+    background: linear-gradient(90deg, #ffffff, #ff6b6b);  /* White to Pink gradient */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    margin-bottom: 20px;
     animation: slideInFromLeft 1s ease-out;
 }
 
@@ -104,24 +96,22 @@ nav ul li a {
 }
 
 .hero .cta:hover {
-    background-color: #f39c12;  /* Orange color on hover */
-    transform: scale(1.05);  /* Button scale effect */
+    background-color: #f39c12;
+    transform: scale(1.05);
 }
 
 /* About Section */
 .about {
     padding: 50px;
     text-align: center;
-    background-color: #111;  /* Slightly darker background */
-    color: white;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    animation: fadeInUp 2s ease-in-out;
+    background-color: #111;
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .about h2 {
     font-size: 40px;
     margin-bottom: 20px;
-    color: #ff6b6b;  /* Pink heading color */
+    color: #ff6b6b;
 }
 
 .about p {
@@ -129,31 +119,83 @@ nav ul li a {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
-    color: #ddd;  /* Lighter text for readability */
+    color: #ddd;
+}
+
+/* Events Section */
+.events {
+    padding: 50px;
+    background-color: #222;
+    text-align: center;
+}
+
+.events h2 {
+    font-size: 40px;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+.event {
+    margin-bottom: 30px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.event h3 {
+    font-size: 24px;
+    color: #ff6b6b;
+}
+
+.event p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px;
+    text-align: center;
+    background-color: #111;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 15px 30px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #f39c12;
 }
 
 /* Footer */
 footer {
-    padding: 20px;
     text-align: center;
     background-color: #222;
+    padding: 20px;
     color: #888;
 }
 
-footer p {
-    font-size: 14px;
-}
-
 /* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 @keyframes fadeInUp {
     from {
         opacity: 0;
