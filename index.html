@@ -13,23 +13,54 @@
             <div class="logo">CS Club</div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <h1>Welcome to CS Club</h1>
         <p>Join us to explore the world of Computer Science</p>
-        <a href="#" class="cta">Get Started</a>
+        <a href="#about" class="cta">Learn More</a>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
         <h2>About Us</h2>
-        <p>Our Computer Science Club is dedicated to fostering a community of passionate learners who explore the exciting world of technology, coding, and innovation. Whether you're a beginner or a seasoned coder, we have something for everyone!</p>
+        <p>Our Computer Science Club is a place where technology enthusiasts of all skill levels can come together. We offer workshops, coding challenges, and a supportive environment for collaboration and learning.</p>
+    </section>
+
+    <section id="events" class="events">
+        <h2>Upcoming Events</h2>
+        <div class="event">
+            <h3>Hackathon 2025</h3>
+            <p>Join us for our annual hackathon! Build innovative projects and win amazing prizes.</p>
+            <p><strong>Date:</strong> March 12, 2025</p>
+        </div>
+        <div class="event">
+            <h3>Web Development Workshop</h3>
+            <p>Learn how to build your own website from scratch in this hands-on workshop.</p>
+            <p><strong>Date:</strong> April 8, 2025</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="cta">Send Message</button>
+        </form>
     </section>
 
     <footer>
