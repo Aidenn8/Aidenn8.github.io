@@ -26,7 +26,7 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-    background: linear-gradient(135deg, #ff5f6d, #ffc3a0);
+    background: linear-gradient(135deg, #a7c0cd, #ff9e8e); /* Lighter Gradient */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -109,26 +109,73 @@ section.visible {
     background: #2a2a2a;
 }
 
+/* Leaders Section */
+#leaders {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.05));
+    padding: 5rem 2rem;
+}
+
+.leaders-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.leader {
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.leader img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+}
+
+.leader h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.leader p {
+    font-size: 1.2rem;
+}
+
+.leader.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Events Section */
+#events {
+    background: #333;
+    padding: 5rem 2rem;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.event h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ff5f6d;
+}
+
+.event p {
+    font-size: 1.1rem;
+    color: white;
+}
+
 /* Contact Section */
 #contact {
-    background: #333;
-}
-
-/* Section Titles */
-section h2 {
-    font-size: 3.5rem;
-    color: #ff5f6d;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    animation: fadeInUp 1s ease-out;
-}
-
-section p {
-    font-size: 1.2rem;
-    margin: 0 auto;
-    max-width: 800px;
-    animation: fadeInUp 1.5s ease-out;
+    background: #444;
 }
 
 /* Footer */
@@ -147,12 +194,6 @@ footer p {
     color: white;
 }
 
-/* Hover Effects for Content */
-section .content:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-}
-
 /* Animations */
 @keyframes fadeIn {
     0% { opacity: 0; }
@@ -164,6 +205,16 @@ section .content:hover {
     100% { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
 /* Smooth Scroll */
 html {
     scroll-behavior: smooth;
@@ -173,19 +224,36 @@ html {
 #home {
     background-position: center;
     background-size: cover;
-    animation: fadeInUp 2s ease-out;
 }
 
 #about, #projects, #contact {
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.05));
 }
 
-/* Ensure proper spacing between sections */
-section:not(:last-child) {
-    margin-bottom: 100px;
+/* Section Title Animations */
+section h2 {
+    font-size: 3.5rem;
+    color: #ff5f6d;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    animation: fadeInUp 1s ease-out;
 }
 
-/* Media Queries */
+/* Section Content Animations */
+section p {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    max-width: 800px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+section .content:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     header {
         padding: 1rem 2rem;
