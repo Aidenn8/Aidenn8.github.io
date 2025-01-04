@@ -17,12 +17,11 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     color: #ff6b6b;  /* Pink hover color */
-    transform: scale(1.1);
 }
 
 /* Header & Navigation */
@@ -58,27 +57,6 @@ nav ul li {
 nav ul li a {
     font-size: 18px;
     text-transform: uppercase;
-    position: relative;
-}
-
-nav ul li a:hover {
-    color: #ff6b6b;
-}
-
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #ff6b6b;
-    bottom: 0;
-    left: 50%;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
 }
 
 /* Hero Section */
@@ -116,7 +94,7 @@ nav ul li a:hover::after {
     font-size: 18px;
     text-transform: uppercase;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
 }
@@ -124,7 +102,6 @@ nav ul li a:hover::after {
 .hero .cta:hover {
     background-color: #f39c12;
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.5);
 }
 
 /* About Section */
@@ -134,26 +111,6 @@ nav ul li a:hover::after {
     background-color: #111;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.5s ease-in-out;
-}
-
-.about h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #ff6b6b;
-}
-
-.about p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-    color: #ddd;
-    transition: color 0.3s ease;
-}
-
-.about p:hover {
-    color: #f39c12;
 }
 
 /* Events Section */
@@ -176,13 +133,6 @@ nav ul li a:hover::after {
     border-radius: 8px;
     opacity: 0;
     transform: translateX(50px);
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.event:hover {
-    transform: translateX(0);
-    background-color: #444;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .event h3 {
@@ -202,7 +152,6 @@ nav ul li a:hover::after {
     background-color: #111;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.5s ease-in-out;
 }
 
 .contact h2 {
@@ -218,12 +167,6 @@ form textarea {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-
-form input:focus,
-form textarea:focus {
-    border-color: #ff6b6b;
 }
 
 form button {
@@ -233,12 +176,10 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 form button:hover {
     background-color: #f39c12;
-    transform: scale(1.05);
 }
 
 /* Footer */
@@ -254,3 +195,31 @@ footer {
     from {
         opacity: 0;
         transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
