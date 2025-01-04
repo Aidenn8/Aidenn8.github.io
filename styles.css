@@ -9,9 +9,9 @@
 body {
     background-color: #121212;
     color: white;
-    font-size: 16px;
-    overflow-x: hidden;
+    font-size: 18px;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 1.5rem 3rem;
     background: linear-gradient(135deg, #ff5f6d, #ffc3a0);
     position: sticky;
     top: 0;
@@ -29,18 +29,15 @@ header {
 
 header .logo h1 {
     font-size: 2.5rem;
-    letter-spacing: 2px;
-    font-weight: bold;
+    letter-spacing: 1px;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-}
-
-nav ul li {
-    margin-left: 2rem;
+    gap: 2rem;
 }
 
 nav ul li a {
@@ -76,14 +73,13 @@ nav ul li a:hover::before {
 
 /* Section Styles */
 section {
-    padding: 5rem 2rem;
+    padding: 10rem 2rem 8rem;
     text-align: center;
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease-in-out;
     position: relative;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.1));
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 section.visible {
@@ -93,7 +89,9 @@ section.visible {
 
 /* Home Section */
 #home {
-    background: #1d1d1d;
+    background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center fixed;
+    background-size: cover;
+    padding: 15rem 2rem 15rem;
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -112,15 +110,16 @@ section.visible {
 
 /* Section Titles */
 section h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #ff5f6d;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
+    font-weight: 700;
     animation: fadeInUp 1s ease-out;
 }
 
 section p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin: 0 auto;
     max-width: 800px;
     animation: fadeInUp 1.5s ease-out;
@@ -158,24 +157,49 @@ section .content:hover {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes slideInFromLeft {
-    0% { transform: translateX(-100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
-
-@keyframes slideInFromRight {
-    0% { transform: translateX(100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
-
 /* Smooth Scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* Parallax effect */
+/* Section Background Adjustments */
 #home {
-    background: url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center fixed;
+    background-position: center;
     background-size: cover;
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 2s ease-out;
+}
+
+#about, #projects, #contact {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.05));
+}
+
+section {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure proper spacing between sections */
+section:not(:last-child) {
+    margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 2rem;
+    }
+
+    header .logo h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 2.5rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
 }
