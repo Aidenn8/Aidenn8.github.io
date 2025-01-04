@@ -4,91 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Science Club</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">CS Club</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Welcome to the Computer Science Club</h1>
-        <p>Empowering students to innovate, code, and lead in the tech world.</p>
-        <a href="#about" class="btn">Learn More</a>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2>About Us</h2>
-        <p>The Computer Science Club is dedicated to fostering a love for coding and technology. We provide opportunities for students to learn, collaborate, and innovate.</p>
-    </section>
-
-    <!-- Events Section -->
-    <section id="events" class="section">
-        <h2>Upcoming Events</h2>
-        <div class="event-card">
-            <h3>Hackathon 2025</h3>
-            <p>Join our annual hackathon and showcase your skills!</p>
-            <span>Date: March 15, 2025</span>
+    <header>
+        <div class="logo">
+            <h1>Computer Science Club</h1>
         </div>
-        <div class="event-card">
-            <h3>Workshop: Machine Learning</h3>
-            <p>Learn the basics of machine learning from industry experts.</p>
-            <span>Date: February 20, 2025</span>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="content">
+            <h2>Welcome to the Computer Science Club</h2>
+            <p>Explore the world of coding, algorithms, and innovation.</p>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="section">
-        <h2>Meet the Team</h2>
-        <div class="team-member">
-            <img src="images/president.jpg" alt="President">
-            <h3>Alex Johnson</h3>
-            <p>President</p>
-        </div>
-        <div class="team-member">
-            <img src="images/vice-president.jpg" alt="Vice President">
-            <h3>Jamie Lee</h3>
-            <p>Vice President</p>
+    <section id="about">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>We are a passionate group of students dedicated to learning and sharing knowledge about computer science.</p>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <section id="projects">
+        <div class="content">
+            <h2>Our Projects</h2>
+            <p>Check out the exciting projects we are working on!</p>
+        </div>
     </section>
 
-    <!-- Footer -->
+    <section id="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us with any questions or ideas.</p>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2025 Computer Science Club!. All Rights Reserved.</p>
+        <p>&copy; 2025 Computer Science Club. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
