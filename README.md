@@ -1,3 +1,2 @@
 # Aidenn8.github.io
 
-TEST FOR COMP SCI CLUB WEBSITE
