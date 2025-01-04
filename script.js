@@ -1,9 +1,10 @@
-// Add any JavaScript if needed, for animations or interactive features
-// Example: smooth scroll for CTA button
-
-document.querySelector('.cta').addEventListener('click', function(e) {
+// Simple JavaScript to add smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    document.querySelector('#about').scrollIntoView({
-        behavior: 'smooth'
+
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
     });
+  });
 });
