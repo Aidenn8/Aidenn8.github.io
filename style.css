@@ -1,40 +1,58 @@
-/* Basic styles remain the same, add these animations and effects */
-
-/* Animations */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-@keyframes slideInFromLeft {
-    0% { transform: translateX(-100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
+body {
+    background-color: #121212;
+    color: white;
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
-@keyframes slideInFromRight {
-    0% { transform: translateX(100%); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #ff5f6d, #ffc3a0);
 }
 
-@keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(30px); }
-    100% { opacity: 1; transform: translateY(0); }
+header .logo h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 
-/* Content sections */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff5f6d;
+}
+
 section {
     padding: 5rem 2rem;
     text-align: center;
     background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(255,255,255,0.1));
     border-bottom: 2px solid rgba(255,255,255,0.1);
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease-in-out;
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 section#home {
@@ -46,25 +64,17 @@ section#about, section#projects, section#contact {
     background: #333;
 }
 
-/* Header and Navigation */
-header {
-    animation: slideInFromLeft 1s ease-in-out;
-}
-
-/* Hover effects on content */
-section .content:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Smooth hover animation for the navigation */
-nav ul li a {
-    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
+section h2 {
+    font-size: 2.5rem;
     color: #ff5f6d;
-    transform: scale(1.1);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 footer {
@@ -81,9 +91,13 @@ footer p {
     color: white;
 }
 
-/* Parallax effect */
-#home {
-    background: url('path_to_your_image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    animation: fadeInUp 1s ease-out;
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Hover effect on content */
+section .content:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
