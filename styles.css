@@ -72,7 +72,7 @@ nav ul li a {
 
 .hero h1 {
     font-size: 60px;
-    background: linear-gradient(90deg, #ffffff, #ff6b6b);
+    background: linear-gradient(90deg, #ffffff, #ff6b6b);  /* White to Pink gradient */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -100,34 +100,66 @@ nav ul li a {
     transform: scale(1.05);
 }
 
-/* Section Styles */
-section {
+/* Meet the Leaders Section */
+#team {
     padding: 50px;
-    text-align: center;
     background-color: #111;
+    text-align: center;
     position: relative;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-section.in-view {
+#team.in-view {
     opacity: 1;
     transform: translateY(0);
 }
 
-section h2 {
+#team h2 {
     font-size: 40px;
     margin-bottom: 20px;
     color: #ff6b6b;
 }
 
-section p {
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #222;
+    border: 2px solid #ff6b6b;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 22%;
+    min-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.team-member p {
     font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
     color: #ddd;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Animations */
@@ -162,32 +194,4 @@ section p {
         opacity: 1;
         transform: translateX(0);
     }
-}
-
-/* Asymmetrical Shapes */
-.asymmetrical-design {
-    position: absolute;
-    top: 30%;
-    right: 10%;
-    transform: rotate(10deg);
-}
-
-.shape {
-    width: 150px;
-    height: 150px;
-    background-color: rgba(255, 107, 107, 0.3);
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.shape-one {
-    left: -50px;
-    top: -50px;
-}
-
-.shape-two {
-    left: 100px;
-    top: 100px;
 }
