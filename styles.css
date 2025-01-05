@@ -100,21 +100,21 @@ nav ul li a {
     transform: scale(1.05);
 }
 
-/* About Section */
-.about {
+/* Section Styles */
+section {
     padding: 50px;
     text-align: center;
     background-color: #111;
     animation: fadeInUp 1s ease-in-out;
 }
 
-.about h2 {
+section h2 {
     font-size: 40px;
     margin-bottom: 20px;
     color: #ff6b6b;
 }
 
-.about p {
+section p {
     font-size: 18px;
     max-width: 800px;
     margin: 0 auto;
@@ -122,77 +122,26 @@ nav ul li a {
     color: #ddd;
 }
 
-/* Events Section */
-.events {
-    padding: 50px;
+/* Testimonials Section */
+.testimonials {
     background-color: #222;
-    text-align: center;
 }
 
-.events h2 {
-    font-size: 40px;
-    color: #ff6b6b;
-    margin-bottom: 20px;
-}
-
-.event {
-    margin-bottom: 30px;
+.testimonial-card {
     background-color: #333;
     padding: 20px;
+    margin-bottom: 20px;
     border-radius: 8px;
 }
 
-.event h3 {
+.testimonial-card h3 {
     font-size: 24px;
     color: #ff6b6b;
 }
 
-.event p {
+.testimonial-card p {
     font-size: 18px;
     color: #ddd;
-}
-
-/* Contact Section */
-.contact {
-    padding: 50px;
-    text-align: center;
-    background-color: #111;
-}
-
-.contact h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #ff6b6b;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 15px 30px;
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background-color: #f39c12;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #222;
-    padding: 20px;
-    color: #888;
 }
 
 /* Animations */
