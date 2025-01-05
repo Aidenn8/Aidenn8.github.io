@@ -1,9 +1,20 @@
-// Add any JavaScript if needed, for animations or interactive features
-// Example: smooth scroll for CTA button
+// Intersection Observer to detect when elements are in view
+document.addEventListener("DOMContentLoaded", function() {
+    // Create an IntersectionObserver instance
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer.unobserve(entry.target);  // Unobserve after the section comes into view
+            }
+        });
+    }, {
+        threshold: 0.5  // Trigger when 50% of the section is visible
+    });
 
-document.querySelector('.cta').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('#about').scrollIntoView({
-        behavior: 'smooth'
+    // Observe all sections that should have the scroll-triggered animation
+    const sections = document.querySelectorAll("section");
+    sections.forEach(section => {
+        observer.observe(section);
     });
 });
