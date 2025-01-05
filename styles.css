@@ -89,3 +89,102 @@ nav ul li a {
 .hero .cta {
     background-color: #ff6b6b;
     padding: 15px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .cta:hover {
+    background-color: #f39c12;
+    transform: scale(1.05);
+}
+
+/* Section Styles */
+section {
+    padding: 50px;
+    text-align: center;
+    background-color: #111;
+    position: relative;
+}
+
+section h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #ff6b6b;
+}
+
+section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.fadeIn {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Asymmetrical Shapes */
+.asymmetrical-design {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    transform: rotate(10deg);
+}
+
+.shape {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 107, 107, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.shape-one {
+    left: -50px;
+    top: -50px;
+}
+
+.shape-two {
+    left: 100px;
+    top: 100px;
+}
