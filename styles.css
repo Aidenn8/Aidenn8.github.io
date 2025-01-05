@@ -77,13 +77,11 @@ nav ul li a {
     background-clip: text;
     color: transparent;
     margin-bottom: 20px;
-    animation: fadeInFromLeft 1s ease-out;
 }
 
 .hero p {
     font-size: 24px;
     margin-bottom: 40px;
-    animation: fadeInFromRight 1s ease-out;
 }
 
 .hero .cta {
@@ -106,6 +104,15 @@ section {
     text-align: center;
     background-color: #111;
     position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When scrolled into view */
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 section h2 {
@@ -120,45 +127,6 @@ section p {
     margin: 0 auto;
     line-height: 1.8;
     color: #ddd;
-}
-
-.fadeIn {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1s forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 /* Asymmetrical Shapes */
