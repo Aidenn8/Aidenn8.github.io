@@ -169,31 +169,19 @@ h3 {
 
 .continuation {
   position: relative;
-  margin-top: 0.9rem;
-  margin-left: 0.15rem;
-  padding-left: 1.15rem;
+  margin-top: 0.85rem;
+  margin-left: 0.2rem;
+  padding-left: 2.1rem;
 }
 
 .continuation::before {
-  content: "";
+  content: "↳";
   position: absolute;
-  top: 0.12rem;
-  bottom: 0.18rem;
+  top: 0.05rem;
   left: 0;
-  width: 1px;
-  background: var(--line);
-}
-
-.continuation::after {
-  content: "";
-  position: absolute;
-  top: 0.4rem;
-  left: -0.18rem;
-  width: 0.36rem;
-  height: 0.36rem;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 1.05rem;
+  line-height: 1;
 }
 
 .continuation > div {
