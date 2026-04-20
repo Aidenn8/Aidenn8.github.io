@@ -141,7 +141,7 @@ h2 {
   background: var(--accent);
 }
 
-.entry > div {
+.entry > div:not(.continuation) {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
