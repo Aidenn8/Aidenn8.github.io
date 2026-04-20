@@ -188,7 +188,11 @@ h3 {
 }
 
 .continuation-title {
-  margin: 0 0 0.18rem;
+  margin: 0 0 0.45rem;
+}
+
+.continuation-body > p:not(.continuation-title) {
+  margin-top: 0;
 }
 
 .continuation-title strong {
