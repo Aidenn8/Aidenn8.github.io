@@ -23,10 +23,11 @@ body {
 }
 
 a {
-  color: inherit;
-  text-decoration-color: var(--line);
+  color: #4f6a5d;
+  text-decoration-color: #aab9b0;
   text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
+  text-underline-offset: 0.2em;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
 }
 
 a:hover {
